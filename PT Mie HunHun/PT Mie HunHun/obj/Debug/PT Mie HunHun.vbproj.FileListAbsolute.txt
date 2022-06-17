@@ -27,3 +27,22 @@ D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.vbp
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.exe
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.pdb
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.xml
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Produksi.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Purchasing.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.Shared.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\stdole.dll

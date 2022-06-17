@@ -32,6 +32,8 @@ Partial Class Main_Menu
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DepartemenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,6 +48,7 @@ Partial Class Main_Menu
         '
         'ToolStripMenuItem1
         '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepartemenToolStripMenuItem, Me.ReportToolStripMenuItem})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(73, 20)
         Me.ToolStripMenuItem1.Text = "Marketing"
@@ -95,6 +98,18 @@ Partial Class Main_Menu
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "PT Mie HunHun"
         '
+        'DepartemenToolStripMenuItem
+        '
+        Me.DepartemenToolStripMenuItem.Name = "DepartemenToolStripMenuItem"
+        Me.DepartemenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DepartemenToolStripMenuItem.Text = "Departemen"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReportToolStripMenuItem.Text = "Report"
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -123,4 +138,6 @@ Partial Class Main_Menu
     Friend WithEvents WarehouseRMToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QCToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
+    Friend WithEvents DepartemenToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
 End Class
