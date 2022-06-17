@@ -18,3 +18,12 @@ D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.exe
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.exe
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.xml
 D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.pdb
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.vbprojResolveAssemblyReference.cache
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Main_Menu.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Marketing.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Resources.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.QC.resources
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.vbproj.GenerateResource.Cache
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.exe
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.pdb
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.xml

@@ -98,6 +98,6 @@
     End Sub
 
     Private Sub btnmenu_Click(sender As Object, e As EventArgs) Handles btnmenu.Click
-        MainMenu.show()
+        Main_Menu.Show()
     End Sub
 End Class
