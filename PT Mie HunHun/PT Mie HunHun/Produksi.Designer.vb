@@ -47,9 +47,11 @@ Partial Class Produksi
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Total = New System.Windows.Forms.TextBox()
+        Me.idmie = New System.Windows.Forms.TextBox()
         Me.safety = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.idmie = New System.Windows.Forms.ComboBox()
         Me.jenismie = New System.Windows.Forms.TextBox()
         Me.jumlah = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,19 +60,19 @@ Partial Class Produksi
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Print = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.noinvoice = New System.Windows.Forms.TextBox()
         Me.Cmbbatch = New System.Windows.Forms.ComboBox()
-        Me.noinvoice = New System.Windows.Forms.ComboBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.jadwal = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Excel = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Dgvpro = New System.Windows.Forms.DataGridView()
         Me.buatpesanan = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.mieid = New System.Windows.Forms.TextBox()
-        Me.Total = New System.Windows.Forms.TextBox()
+        Me.Total_Pro = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.safetystock = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -88,7 +90,7 @@ Partial Class Produksi
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgvpro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -96,11 +98,11 @@ Partial Class Produksi
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(10, 6)
+        Me.TabControl1.Location = New System.Drawing.Point(9, 10)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(719, 482)
-        Me.TabControl1.TabIndex = 1
+        Me.TabControl1.Size = New System.Drawing.Size(719, 508)
+        Me.TabControl1.TabIndex = 2
         '
         'TabPage1
         '
@@ -116,7 +118,7 @@ Partial Class Produksi
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(711, 456)
+        Me.TabPage1.Size = New System.Drawing.Size(711, 482)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rencana Produksi"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -187,7 +189,7 @@ Partial Class Produksi
         '
         'Save
         '
-        Me.Save.Location = New System.Drawing.Point(172, 268)
+        Me.Save.Location = New System.Drawing.Point(166, 300)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(64, 26)
         Me.Save.TabIndex = 16
@@ -214,7 +216,7 @@ Partial Class Produksi
         '
         'Hitung
         '
-        Me.Hitung.Location = New System.Drawing.Point(96, 268)
+        Me.Hitung.Location = New System.Drawing.Point(96, 300)
         Me.Hitung.Name = "Hitung"
         Me.Hitung.Size = New System.Drawing.Size(64, 26)
         Me.Hitung.TabIndex = 12
@@ -248,7 +250,7 @@ Partial Class Produksi
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 300)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 332)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(220, 144)
         Me.GroupBox2.TabIndex = 2
@@ -321,9 +323,11 @@ Partial Class Produksi
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label21)
+        Me.GroupBox1.Controls.Add(Me.Total)
+        Me.GroupBox1.Controls.Add(Me.idmie)
         Me.GroupBox1.Controls.Add(Me.safety)
         Me.GroupBox1.Controls.Add(Me.Label20)
-        Me.GroupBox1.Controls.Add(Me.idmie)
         Me.GroupBox1.Controls.Add(Me.jenismie)
         Me.GroupBox1.Controls.Add(Me.jumlah)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -331,10 +335,33 @@ Partial Class Produksi
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(16, 106)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(220, 156)
+        Me.GroupBox1.Size = New System.Drawing.Size(220, 188)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Produk yang Diproduksi"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(6, 152)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(75, 13)
+        Me.Label21.TabIndex = 13
+        Me.Label21.Text = "Total Produksi"
+        '
+        'Total
+        '
+        Me.Total.Location = New System.Drawing.Point(90, 149)
+        Me.Total.Name = "Total"
+        Me.Total.Size = New System.Drawing.Size(111, 20)
+        Me.Total.TabIndex = 12
+        '
+        'idmie
+        '
+        Me.idmie.Location = New System.Drawing.Point(90, 29)
+        Me.idmie.Name = "idmie"
+        Me.idmie.Size = New System.Drawing.Size(111, 20)
+        Me.idmie.TabIndex = 10
         '
         'safety
         '
@@ -342,7 +369,7 @@ Partial Class Produksi
         Me.safety.Name = "safety"
         Me.safety.Size = New System.Drawing.Size(111, 20)
         Me.safety.TabIndex = 9
-        Me.safety.Text = "10"
+        Me.safety.Text = "10 pcs"
         '
         'Label20
         '
@@ -352,14 +379,6 @@ Partial Class Produksi
         Me.Label20.Size = New System.Drawing.Size(68, 13)
         Me.Label20.TabIndex = 8
         Me.Label20.Text = "Safety Stock"
-        '
-        'idmie
-        '
-        Me.idmie.FormattingEnabled = True
-        Me.idmie.Location = New System.Drawing.Point(90, 32)
-        Me.idmie.Name = "idmie"
-        Me.idmie.Size = New System.Drawing.Size(111, 21)
-        Me.idmie.TabIndex = 7
         '
         'jenismie
         '
@@ -408,14 +427,14 @@ Partial Class Produksi
         Me.TabPage2.Controls.Add(Me.GroupBox5)
         Me.TabPage2.Controls.Add(Me.Button5)
         Me.TabPage2.Controls.Add(Me.Excel)
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.Dgvpro)
         Me.TabPage2.Controls.Add(Me.buatpesanan)
         Me.TabPage2.Controls.Add(Me.GroupBox3)
         Me.TabPage2.Controls.Add(Me.Label1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(711, 456)
+        Me.TabPage2.Size = New System.Drawing.Size(711, 482)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Proses Produksi"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -431,8 +450,8 @@ Partial Class Produksi
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.Cmbbatch)
         Me.GroupBox5.Controls.Add(Me.noinvoice)
+        Me.GroupBox5.Controls.Add(Me.Cmbbatch)
         Me.GroupBox5.Controls.Add(Me.Label12)
         Me.GroupBox5.Controls.Add(Me.jadwal)
         Me.GroupBox5.Controls.Add(Me.Label13)
@@ -444,26 +463,25 @@ Partial Class Produksi
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Produksi"
         '
+        'noinvoice
+        '
+        Me.noinvoice.Location = New System.Drawing.Point(98, 44)
+        Me.noinvoice.Name = "noinvoice"
+        Me.noinvoice.Size = New System.Drawing.Size(155, 20)
+        Me.noinvoice.TabIndex = 13
+        '
         'Cmbbatch
         '
         Me.Cmbbatch.FormattingEnabled = True
-        Me.Cmbbatch.Location = New System.Drawing.Point(98, 47)
+        Me.Cmbbatch.Location = New System.Drawing.Point(98, 11)
         Me.Cmbbatch.Name = "Cmbbatch"
         Me.Cmbbatch.Size = New System.Drawing.Size(155, 21)
         Me.Cmbbatch.TabIndex = 26
         '
-        'noinvoice
-        '
-        Me.noinvoice.FormattingEnabled = True
-        Me.noinvoice.Location = New System.Drawing.Point(98, 19)
-        Me.noinvoice.Name = "noinvoice"
-        Me.noinvoice.Size = New System.Drawing.Size(155, 21)
-        Me.noinvoice.TabIndex = 19
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(7, 22)
+        Me.Label12.Location = New System.Drawing.Point(7, 50)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(42, 13)
         Me.Label12.TabIndex = 22
@@ -488,7 +506,7 @@ Partial Class Produksi
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(7, 50)
+        Me.Label14.Location = New System.Drawing.Point(7, 19)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 13)
         Me.Label14.TabIndex = 18
@@ -512,13 +530,13 @@ Partial Class Produksi
         Me.Excel.Text = "Export to Excel"
         Me.Excel.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'Dgvpro
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(316, 71)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(359, 189)
-        Me.DataGridView1.TabIndex = 24
+        Me.Dgvpro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgvpro.Location = New System.Drawing.Point(316, 71)
+        Me.Dgvpro.Name = "Dgvpro"
+        Me.Dgvpro.Size = New System.Drawing.Size(359, 189)
+        Me.Dgvpro.TabIndex = 24
         '
         'buatpesanan
         '
@@ -532,7 +550,7 @@ Partial Class Produksi
         'GroupBox3
         '
         Me.GroupBox3.Controls.Add(Me.mieid)
-        Me.GroupBox3.Controls.Add(Me.Total)
+        Me.GroupBox3.Controls.Add(Me.Total_Pro)
         Me.GroupBox3.Controls.Add(Me.Label19)
         Me.GroupBox3.Controls.Add(Me.safetystock)
         Me.GroupBox3.Controls.Add(Me.Label18)
@@ -555,12 +573,12 @@ Partial Class Produksi
         Me.mieid.Size = New System.Drawing.Size(111, 20)
         Me.mieid.TabIndex = 12
         '
-        'Total
+        'Total_Pro
         '
-        Me.Total.Location = New System.Drawing.Point(117, 140)
-        Me.Total.Name = "Total"
-        Me.Total.Size = New System.Drawing.Size(111, 20)
-        Me.Total.TabIndex = 11
+        Me.Total_Pro.Location = New System.Drawing.Point(117, 140)
+        Me.Total_Pro.Name = "Total_Pro"
+        Me.Total_Pro.Size = New System.Drawing.Size(111, 20)
+        Me.Total_Pro.TabIndex = 11
         '
         'Label19
         '
@@ -577,7 +595,7 @@ Partial Class Produksi
         Me.safetystock.Name = "safetystock"
         Me.safetystock.Size = New System.Drawing.Size(111, 20)
         Me.safetystock.TabIndex = 9
-        Me.safetystock.Text = "10"
+        Me.safetystock.Text = "10 pcs"
         '
         'Label18
         '
@@ -643,7 +661,7 @@ Partial Class Produksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(735, 497)
+        Me.ClientSize = New System.Drawing.Size(738, 530)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Produksi"
         Me.Text = "Produksi"
@@ -660,7 +678,7 @@ Partial Class Produksi
         Me.TabPage2.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgvpro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
@@ -692,9 +710,11 @@ Partial Class Produksi
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Total As TextBox
+    Friend WithEvents idmie As TextBox
     Friend WithEvents safety As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents idmie As ComboBox
     Friend WithEvents jenismie As TextBox
     Friend WithEvents jumlah As TextBox
     Friend WithEvents Label4 As Label
@@ -703,19 +723,19 @@ Partial Class Produksi
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Print As Button
     Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents noinvoice As TextBox
     Friend WithEvents Cmbbatch As ComboBox
-    Friend WithEvents noinvoice As ComboBox
     Friend WithEvents Label12 As Label
     Friend WithEvents jadwal As DateTimePicker
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents Excel As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Dgvpro As DataGridView
     Friend WithEvents buatpesanan As Button
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents mieid As TextBox
-    Friend WithEvents Total As TextBox
+    Friend WithEvents Total_Pro As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents safetystock As TextBox
     Friend WithEvents Label18 As Label

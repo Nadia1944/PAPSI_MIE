@@ -16,6 +16,14 @@
     End Sub
 
     Private Sub ReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem.Click
-        'Form_Report_Invoice.show()
+        'Form_Report_Invoice.Show()
+    End Sub
+
+    Private Sub ProduksiToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProduksiToolStripMenuItem.Click
+        Produksi.Show()
+    End Sub
+
+    Private Sub PurchasingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasingToolStripMenuItem.Click
+        Purchasing.Show()
     End Sub
 End Class

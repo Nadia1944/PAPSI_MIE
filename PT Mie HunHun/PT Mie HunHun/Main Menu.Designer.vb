@@ -25,6 +25,8 @@ Partial Class Main_Menu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main_Menu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepartemenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WarehouseFGToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProduksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchasingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,8 +34,6 @@ Partial Class Main_Menu
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DepartemenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,6 +52,18 @@ Partial Class Main_Menu
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(73, 20)
         Me.ToolStripMenuItem1.Text = "Marketing"
+        '
+        'DepartemenToolStripMenuItem
+        '
+        Me.DepartemenToolStripMenuItem.Name = "DepartemenToolStripMenuItem"
+        Me.DepartemenToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.DepartemenToolStripMenuItem.Text = "Departemen"
+        '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'WarehouseFGToolStripMenuItem
         '
@@ -97,18 +109,6 @@ Partial Class Main_Menu
         Me.Label1.Size = New System.Drawing.Size(316, 49)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "PT Mie HunHun"
-        '
-        'DepartemenToolStripMenuItem
-        '
-        Me.DepartemenToolStripMenuItem.Name = "DepartemenToolStripMenuItem"
-        Me.DepartemenToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DepartemenToolStripMenuItem.Text = "Departemen"
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ReportToolStripMenuItem.Text = "Report"
         '
         'Main_Menu
         '
