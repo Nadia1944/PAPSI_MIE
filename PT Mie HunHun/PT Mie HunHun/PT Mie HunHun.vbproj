@@ -101,6 +101,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Produksi.Designer.vb">
+      <DependentUpon>Produksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Produksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchasing.Designer.vb">
+      <DependentUpon>Purchasing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Purchasing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="QC.Designer.vb">
       <DependentUpon>QC.vb</DependentUpon>
     </Compile>
@@ -120,6 +132,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Produksi.resx">
+      <DependentUpon>Produksi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchasing.resx">
+      <DependentUpon>Purchasing.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QC.resx">
       <DependentUpon>QC.vb</DependentUpon>
