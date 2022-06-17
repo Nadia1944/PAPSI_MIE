@@ -10,3 +10,7 @@ D:\SMT 6\PAPSI\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.pdb
 D:\SMT 6\PAPSI\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Main_Menu.resources
 D:\SMT 6\PAPSI\PT Mie HunHun\PT Mie HunHun\obj\Debug\Main_Menu.Marketing.resources
 D:\SMT 6\PAPSI\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.vbprojResolveAssemblyReference.cache
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\Debug\PT Mie HunHun.exe.config
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.exe
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.xml
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\Debug\PT Mie HunHun.pdb
