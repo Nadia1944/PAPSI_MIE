@@ -26,6 +26,8 @@ Partial Class Produksi
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Invoice = New System.Windows.Forms.ComboBox()
+        Me.FG = New System.Windows.Forms.ComboBox()
+        Me.Label22 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.plan = New System.Windows.Forms.DateTimePicker()
         Me.KodeBatch = New System.Windows.Forms.TextBox()
@@ -101,7 +103,7 @@ Partial Class Produksi
         Me.TabControl1.Location = New System.Drawing.Point(9, 10)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(719, 508)
+        Me.TabControl1.Size = New System.Drawing.Size(719, 547)
         Me.TabControl1.TabIndex = 2
         '
         'TabPage1
@@ -118,7 +120,7 @@ Partial Class Produksi
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(711, 482)
+        Me.TabPage1.Size = New System.Drawing.Size(711, 521)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Rencana Produksi"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -126,14 +128,16 @@ Partial Class Produksi
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Invoice)
+        Me.GroupBox4.Controls.Add(Me.FG)
+        Me.GroupBox4.Controls.Add(Me.Label22)
         Me.GroupBox4.Controls.Add(Me.Label11)
         Me.GroupBox4.Controls.Add(Me.plan)
         Me.GroupBox4.Controls.Add(Me.KodeBatch)
         Me.GroupBox4.Controls.Add(Me.Label10)
         Me.GroupBox4.Controls.Add(Me.Label9)
-        Me.GroupBox4.Location = New System.Drawing.Point(16, 6)
+        Me.GroupBox4.Location = New System.Drawing.Point(16, 3)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(263, 96)
+        Me.GroupBox4.Size = New System.Drawing.Size(263, 134)
         Me.GroupBox4.TabIndex = 17
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Planning"
@@ -144,12 +148,29 @@ Partial Class Produksi
         Me.Invoice.Location = New System.Drawing.Point(102, 13)
         Me.Invoice.Name = "Invoice"
         Me.Invoice.Size = New System.Drawing.Size(155, 21)
-        Me.Invoice.TabIndex = 8
+        Me.Invoice.TabIndex = 18
+        '
+        'FG
+        '
+        Me.FG.FormattingEnabled = True
+        Me.FG.Location = New System.Drawing.Point(102, 42)
+        Me.FG.Name = "FG"
+        Me.FG.Size = New System.Drawing.Size(155, 21)
+        Me.FG.TabIndex = 17
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Location = New System.Drawing.Point(5, 45)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(64, 13)
+        Me.Label22.TabIndex = 16
+        Me.Label22.Text = "FG Demand"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(11, 16)
+        Me.Label11.Location = New System.Drawing.Point(7, 16)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(42, 13)
         Me.Label11.TabIndex = 15
@@ -157,14 +178,14 @@ Partial Class Produksi
         '
         'plan
         '
-        Me.plan.Location = New System.Drawing.Point(102, 67)
+        Me.plan.Location = New System.Drawing.Point(102, 98)
         Me.plan.Name = "plan"
         Me.plan.Size = New System.Drawing.Size(155, 20)
         Me.plan.TabIndex = 9
         '
         'KodeBatch
         '
-        Me.KodeBatch.Location = New System.Drawing.Point(102, 40)
+        Me.KodeBatch.Location = New System.Drawing.Point(102, 72)
         Me.KodeBatch.Name = "KodeBatch"
         Me.KodeBatch.Size = New System.Drawing.Size(155, 20)
         Me.KodeBatch.TabIndex = 7
@@ -172,7 +193,7 @@ Partial Class Produksi
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(11, 70)
+        Me.Label10.Location = New System.Drawing.Point(6, 105)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(87, 13)
         Me.Label10.TabIndex = 8
@@ -181,7 +202,7 @@ Partial Class Produksi
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(11, 44)
+        Me.Label9.Location = New System.Drawing.Point(6, 75)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(63, 13)
         Me.Label9.TabIndex = 7
@@ -189,7 +210,7 @@ Partial Class Produksi
         '
         'Save
         '
-        Me.Save.Location = New System.Drawing.Point(166, 300)
+        Me.Save.Location = New System.Drawing.Point(166, 337)
         Me.Save.Name = "Save"
         Me.Save.Size = New System.Drawing.Size(64, 26)
         Me.Save.TabIndex = 16
@@ -198,7 +219,7 @@ Partial Class Produksi
         '
         'Status
         '
-        Me.Status.Location = New System.Drawing.Point(584, 312)
+        Me.Status.Location = New System.Drawing.Point(584, 319)
         Me.Status.Name = "Status"
         Me.Status.Size = New System.Drawing.Size(79, 26)
         Me.Status.TabIndex = 14
@@ -207,7 +228,7 @@ Partial Class Produksi
         '
         'purchase
         '
-        Me.purchase.Location = New System.Drawing.Point(584, 347)
+        Me.purchase.Location = New System.Drawing.Point(584, 354)
         Me.purchase.Name = "purchase"
         Me.purchase.Size = New System.Drawing.Size(79, 38)
         Me.purchase.TabIndex = 13
@@ -216,7 +237,7 @@ Partial Class Produksi
         '
         'Hitung
         '
-        Me.Hitung.Location = New System.Drawing.Point(96, 300)
+        Me.Hitung.Location = New System.Drawing.Point(96, 337)
         Me.Hitung.Name = "Hitung"
         Me.Hitung.Size = New System.Drawing.Size(64, 26)
         Me.Hitung.TabIndex = 12
@@ -225,7 +246,7 @@ Partial Class Produksi
         '
         'cekstok
         '
-        Me.cekstok.Location = New System.Drawing.Point(584, 278)
+        Me.cekstok.Location = New System.Drawing.Point(584, 285)
         Me.cekstok.Name = "cekstok"
         Me.cekstok.Size = New System.Drawing.Size(79, 26)
         Me.cekstok.TabIndex = 11
@@ -235,7 +256,7 @@ Partial Class Produksi
         'DGVRM
         '
         Me.DGVRM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVRM.Location = New System.Drawing.Point(255, 111)
+        Me.DGVRM.Location = New System.Drawing.Point(285, 111)
         Me.DGVRM.Name = "DGVRM"
         Me.DGVRM.Size = New System.Drawing.Size(409, 151)
         Me.DGVRM.TabIndex = 10
@@ -250,7 +271,7 @@ Partial Class Produksi
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 332)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 369)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(220, 144)
         Me.GroupBox2.TabIndex = 2
@@ -333,7 +354,7 @@ Partial Class Produksi
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 106)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 143)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(220, 188)
         Me.GroupBox1.TabIndex = 1
@@ -434,7 +455,7 @@ Partial Class Produksi
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(711, 482)
+        Me.TabPage2.Size = New System.Drawing.Size(711, 521)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Proses Produksi"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -661,7 +682,7 @@ Partial Class Produksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(738, 530)
+        Me.ClientSize = New System.Drawing.Size(738, 557)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "Produksi"
         Me.Text = "Produksi"
@@ -688,7 +709,6 @@ Partial Class Produksi
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Invoice As ComboBox
     Friend WithEvents Label11 As Label
     Friend WithEvents plan As DateTimePicker
     Friend WithEvents KodeBatch As TextBox
@@ -745,4 +765,7 @@ Partial Class Produksi
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents FG As ComboBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Invoice As ComboBox
 End Class

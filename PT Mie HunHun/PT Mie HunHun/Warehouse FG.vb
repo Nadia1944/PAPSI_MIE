@@ -2,7 +2,7 @@
 
     Sub TampilkanData()
             Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("select * from Warehouse FG ", Conn)
+        DA = New OleDb.OleDbDataAdapter("select * from Warehouse_FG ", Conn)
         DS = New DataSet
             DA.Fill(DS)
             DataGridView1.DataSource = DS.Tables(0)
@@ -70,18 +70,24 @@
             txtfgminus.Enabled = True
             txtjmlminus.Enabled = True
             Call Nomorfakturotomatis()
-            'CMD = New OleDb.OleDbCommand("SELECT * From Warehouse_FG where Id_Mie = '" & cmbidmie.Text & "'", Conn)
-            'DM = CMD.ExecuteReader
-            'DM.Read()
-            'Dim hitung As String = (DM.Item("Jumlah_Stok") - Val(txtjml.Text)) * (-1)
-            'txtjmlminus.Text = hitung
-            'CMD = New OleDb.OleDbCommand(hitung, Conn)
-            'CMD.ExecuteNonQuery()
-        End Sub
+        'CMD = New OleDb.OleDbCommand("SELECT * From Warehouse_FG where Id_Mie = '" & cmbidmie.Text & "'", Conn)
+        'DM = CMD.ExecuteReader
+        'DM.Read()
+        'Dim hitung As String
+        'hitung = ((DM.Item("Jumlah_Stok") - Val(txtjml.Text))) * (-1)
+        'txtjmlminus.Text = hitung
+        'CMD = New OleDb.OleDbCommand(hitung, Conn)
+        'CMD.ExecuteNonQuery()
+    End Sub
         Private Sub FG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             Call TampilkanData()
-            Call invoice()
-            txtfgminus.Enabled = False
+        Call invoice()
+        Call Nomorfakturotomatis()
+        txtfgminus.Enabled = False
             txtjmlminus.Enabled = False
         End Sub
-    End Class
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+    End Sub
+End Class

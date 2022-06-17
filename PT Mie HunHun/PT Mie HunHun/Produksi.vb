@@ -77,6 +77,7 @@
         Call idinvoice()
         Call matikanform()
         Call batchcode()
+        Call FGCode()
     End Sub
     Sub idinvoice()
         Call koneksiDB()
@@ -107,7 +108,7 @@
         Call TampilkanData()
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Hitung.Click
-        CMD = New OleDb.OleDbCommand("select * from Marketing where Jumlah = '" & jumlah.Text & "'", Conn)
+        CMD = New OleDb.OleDbCommand("select * from FG_Prod where Jumlah = '" & jumlah.Text & "'", Conn)
         DM = CMD.ExecuteReader
         DM.Read()
         Dim totalproduksi As Integer
@@ -133,7 +134,7 @@
                 DM.Read()
                 idmie.Text = DM.Item("ID_Mie")
                 jenismie.Text = DM.Item("Jenis")
-                jumlah.Text = DM.Item("Jumlah")
+                'jumlah.Text = DM.Item("Jumlah")
 
                 idmie.Focus()
             End If
@@ -219,6 +220,71 @@
         demand.Text = Dgvpro.Rows(e.RowIndex).Cells(5).Value
         safetystock.Text = Dgvpro.Rows(e.RowIndex).Cells(6).Value
         Total_Pro.Text = Dgvpro.Rows(e.RowIndex).Cells(7).Value
+        Call Hidupkanform()
+        Cmbbatch.Enabled = False
+    End Sub
+
+    Private Sub FG_SelectedIndexChanged(sender As Object, e As EventArgs) Handles FG.SelectedIndexChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from FG_Prod where FG_Minus ='" & FG.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            If DM.HasRows = True Then
+                DM.Read()
+                FG.Text = DM.Item("FG_Minus")
+                jumlah.Text = DM.Item("Jumlah")
+                FG.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("Data Batch Tidak Ditemukan")
+        End Try
+    End Sub
+    Sub FGCode()
+        Call koneksiDB()
+        Try
+            CMD = New OleDb.OleDbCommand("select * from FG_Prod", Conn) 'select from FG_prod
+            DM = CMD.ExecuteReader
+            DM.Read()
+            Cmbbatch.Items.Clear()
+            Do While DM.Read = True
+                FG.Items.Add(DM.Item("FG_Minus")) 'invoice FG
+            Loop
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cekstok_Click(sender As Object, e As EventArgs) Handles cekstok.Click
+        Call datatampil()
+    End Sub
+
+    Private Sub Status_Click(sender As Object, e As EventArgs) Handles Status.Click
+        'Call koneksiDB()
+        'Try
+        '    CMD = New OleDb.OleDbCommand("select * from Produksi", Conn) 'select from FG_prod
+        '    DM = CMD.ExecuteReader
+        '    DM.Read()
+        '    Dim Tepung, salt, oil, egg As Integer
+        '    Tepung = DM.Item("Tepung_terigu")
+        '    salt = DM.Item("Garam")
+        '    oil = DM.Item("Minyak")
+        '    egg = DM.Item("Telur")
+        '    If Tepung > Dgvpro.Rows(e.RowIndex).Cells(0).Value Then
+        '    End If
+        'Catch
+        'End Try
+
+    End Sub
+
+    Private Sub DGVRM_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVRM.CellContentClick
+        On Error Resume Next
+        CMD = New OleDb.OleDbCommand("select * from FG_Prod", Conn) 'select from FG_prod
+        DM = CMD.ExecuteReader
+        DM.Read()
+        Dgvpro.Rows(e.RowIndex).Cells(0).Value = (DM.Item("ID_RM"))
+        Dgvpro.Rows(e.RowIndex).Cells(1).Value = (DM.Item("Nama_RM"))
+        Dgvpro.Rows(e.RowIndex).Cells(2).Value = (DM.Item("Stok_RM"))
+        Dgvpro.Rows(e.RowIndex).Cells(3).Value = (DM.Item("Satuan_RM"))
         Call Hidupkanform()
         Cmbbatch.Enabled = False
     End Sub

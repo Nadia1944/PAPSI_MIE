@@ -20,9 +20,8 @@
     Sub KosongkanForm()
         Namapemesan.Text = ""
         Supplier.Text = ""
-        namaRM.Text = ""
-        kodeorderRM.Text = ""
-        namaRM.Text = ""
+        batchcmb.Text = ""
+        Nama.Text = ""
         jumlahorder.Text = ""
         satuanRM.Text = ""
         hargaRM.Text = ""
@@ -32,8 +31,7 @@
         txtnoPO.Enabled = False
         Namapemesan.Enabled = False
         Supplier.Enabled = False
-        namaRM.Enabled = False
-        kodeorderRM.Enabled = False
+        Nama.Enabled = False
         satuanRM.Enabled = False
         hargaRM.Enabled = False
         jumlahorder.Enabled = False
@@ -42,13 +40,13 @@
         txtnoPO.Enabled = True
         Namapemesan.Enabled = True
         Supplier.Enabled = True
-        namaRM.Enabled = True
-        kodeorderRM.Enabled = True
+        Nama.Enabled = True
+        batchcmb.Enabled = True
         satuanRM.Enabled = True
         hargaRM.Enabled = True
         jumlahorder.Enabled = True
         tglPO.Enabled = True
-        DateTimePicker2.Enabled = True
+        tgl_kirim.Enabled = True
         cmbTOP.Enabled = True
     End Sub
     Sub Hidupkanbtn()
@@ -67,7 +65,7 @@
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
-        DA = New OleDb.OleDbDataAdapter("Select * from Order_RM", Conn)
+        DA = New OleDb.OleDbDataAdapter("Select * from Purchasing", Conn)
         DS = New DataSet
         DA.Fill(DS)
         dgvPO.DataSource = DS.Tables(0)
@@ -75,10 +73,10 @@
     End Sub
     Private Sub Purchasing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call MatikanForm()
-        Call TampilkanData()
+        'Call TampilkanData()
         Call Matikanbtn()
         tglPO.Enabled = False
-        DateTimePicker2.Enabled = False
+        tgl_kirim.Enabled = False
         cmbTOP.Enabled = False
         txtnoPO.Text = NoPO.Text
         Call kondisiawal()
@@ -98,5 +96,28 @@
         Dim menu As New Main_Menu
         Me.Close()
         menu.Show()
+    End Sub
+
+    Private Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
+        If txtnoPO.Text = "" Or Supplier.Text = "" Or Namapemesan.Text = "" Or
+           Nama.Text = "" Or jumlahorder.Text = "" Or satuanRM.Text = "" Or hargaRM.Text = "" Then
+            MsgBox("Data Pesanan Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand("update Purchasing set Tanggal_PO = '" & tglPO.Value & "', Supplier = '" & Supplier.Text & "', Pemesan = '" & Namapemesan.Text & "', Kode_Batch = '" & batchcmb.Text & "',
+           Nama_RM = '" & Nama.Text & "', Jumlah_Order = '" & jumlahorder.Text & "',  Satuan_RM = '" &
+           satuanRM.Text & "', Harga_RM = '" & hargaRM.Text & "', Tanggal_Kirim = '" & tglkirim.Text & "' , Jangka_Waktu = '" & cmbTOP.Text & "' Where No_PO = '" & txtnoPO.Text & "'", Conn)
+
+            DM = CMD.ExecuteReader
+            MsgBox("Update Data Berhasil")
+        End If
+        Call KosongkanForm()
+        Call MatikanForm()
+        Call TampilkanData()
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles batchcmb.SelectedIndexChanged
+
     End Sub
 End Class
