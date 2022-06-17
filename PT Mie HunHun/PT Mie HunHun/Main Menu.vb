@@ -26,4 +26,12 @@
     Private Sub PurchasingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PurchasingToolStripMenuItem.Click
         Purchasing.Show()
     End Sub
+
+    Private Sub WarehouseFGToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WarehouseFGToolStripMenuItem.Click
+        Warehouse_FG.Show()
+    End Sub
+
+    Private Sub WarehouseRMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WarehouseRMToolStripMenuItem.Click
+        Warehouse_RM.Show()
+    End Sub
 End Class
