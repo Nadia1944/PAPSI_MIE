@@ -76,8 +76,8 @@
         Call Batch()
         Call idinvoice()
         Call matikanform()
-        Call batchcode()
         Call FGCode()
+        Call batchcode()
     End Sub
     Sub idinvoice()
         Call koneksiDB()
@@ -146,7 +146,7 @@
         Purchasing.Show()
     End Sub
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
-        If Invoice.Text = "" Or KodeBatch.Text = "" Or
+        If Invoice.Text = "" Or KodeBatch.Text = "" Or FG.Text = "" Or
              idmie.Text = "" Or jenismie.Text = "" Or jumlah.Text = "" Or terigu.Text = "" Or
              garam.Text = "" Or minyak.Text = "" Or telur.Text = "" Then
             MsgBox("Data Rencana Produksi Belum Lengkap")
@@ -159,7 +159,7 @@
             If Not DM.HasRows Then
                 Call koneksiDB()
                 Dim simpan As String
-                simpan = "insert into Produksi values ('" & KodeBatch.Text & "', '" & Invoice.Text & "', '" & idmie.Text & "','" & jenismie.Text & "','" & jumlah.Text & "','" & plan.Value & "','" & terigu.Text & "','" & garam.Text & "','" & minyak.Text & "','" & telur.Text & "','" & Total.Text & "')"
+                simpan = "insert into Produksi values ('" & KodeBatch.Text & "', '" & Invoice.Text & "', '" & FG.Text & "','" & idmie.Text & "','" & jenismie.Text & "','" & jumlah.Text & "','" & plan.Value & "','" & terigu.Text & "','" & garam.Text & "','" & minyak.Text & "','" & telur.Text & "','" & Total.Text & "')"
                 CMD = New OleDb.OleDbCommand(simpan, Conn)
                 CMD.ExecuteNonQuery()
                 MsgBox("Jadwal Produksi Berhasil Ditambahkan")
