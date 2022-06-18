@@ -34,3 +34,7 @@ C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHu
 C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.exe
 C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.xml
 C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\PT Mie HunHun.exe.config
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.exe
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.xml
+D:\SMT 6\PAPSI\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
