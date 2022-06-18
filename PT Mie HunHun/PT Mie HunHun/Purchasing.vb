@@ -1,7 +1,7 @@
 ﻿Public Class Purchasing
     Sub NomorPO()
         Call koneksiDB()
-        CMD = New OleDb.OleDbCommand("select * from Order_RM where No_PO in (select max(No_PO) from Order_RM)", Conn)
+        CMD = New OleDb.OleDbCommand("select * from Purchasing where No_PO in (select max(No_PO) from Purchasing)", Conn)
         DM = CMD.ExecuteReader
         DM.Read()
         Dim urutankode As String
@@ -55,12 +55,10 @@
         btnexit.Enabled = True
         Input.Enabled = True
         CetakPO.Enabled = True
-        Delete.Enabled = True
         Cancel.Enabled = True
     End Sub
     Sub Matikanbtn()
         Edit.Enabled = False
-        Delete.Enabled = False
         Cancel.Enabled = False
     End Sub
     Sub TampilkanData()
@@ -116,8 +114,77 @@
         Call MatikanForm()
         Call TampilkanData()
     End Sub
-
+    Sub batchid()
+        Call koneksiDB()
+        Try
+            CMD = New OleDb.OleDbCommand("select * from Produksi", Conn) 'select from marketing
+            DM = CMD.ExecuteReader
+            DM.Read()
+            batchcmb.Items.Clear()
+            Do While DM.Read = True
+                batchcmb.Items.Add(DM.Item("Kode_Batch")) 'invoice marketing
+            Loop
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles batchcmb.SelectedIndexChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Beli_RM where Kode_Batch ='" & batchcmb.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            If DM.HasRows = True Then
+                DM.Read()
+                batchcmb.Text = DM.Item("Kode_Batch")
+                '    If Nama.Text = "Tepung Terigu" Then jumlahorder.Text = DM.Item("Kurang_Tepung")
+                'ElseIf Nama.Text = "Garam" Then
+                '    jumlahorder = DM.Item("Kurang_Garam")
+                'ElseIf Nama.Text = "Minyak Goreng" Then
+                '    jumlahorder.Text = DM.Item("Kurang_Minyak")
+                'Else
+                '    jumlahorder.Text = DM.Item("Kurang_Telur")
+                '    'jumlah.Text = DM.Item("Jumlah")
+                '    batchcmb.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("Data Invoice Tidak Ditemukan")
+        End Try
+    End Sub
 
+    Private Sub Delete_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Nama_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Nama.SelectedIndexChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Beli_RM where Kode_Batch ='" & batchcmb.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            If DM.HasRows = True Then
+                DM.Read()
+                batchcmb.Text = DM.Item("Kode_Batch")
+                If Nama.Text = "Tepung Terigu" Then
+                    jumlahorder.Text = DM.Item("Kurang_Tepung")
+                    satuanRM.Text = (" kg")
+                    hargaRM.Text = DM.Item("Kurang_Tepung") * 13500
+                End If
+            ElseIf Nama.Text = "Garam" Then
+                jumlahorder = DM.Item("Kurang_Garam")
+                satuanRM.Text = (" sdm")
+                hargaRM.Text = DM.Item("Kurang_Garam") * 2000
+            ElseIf Nama.Text = "Minyak Goreng" Then
+                jumlahorder.Text = DM.Item("Kurang_Minyak")
+                satuanRM.Text = (" ml")
+                hargaRM.Text = DM.Item("Kurang_Minyak") * 8000
+            Else
+                jumlahorder.Text = DM.Item("Kurang_Telur")
+                satuanRM.Text = (" butir")
+                hargaRM.Text = DM.Item("Kurang_Telur") * 3000
+                'jumlah.Text = DM.Item("Jumlah")
+                batchcmb.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("Data RM Tidak Ditemukan")
+        End Try
     End Sub
 End Class

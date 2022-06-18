@@ -58,7 +58,6 @@ Partial Class Purchasing
         Me.jumlahorder = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tgl_kirim = New System.Windows.Forms.DateTimePicker()
-        Me.Delete = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Edit = New System.Windows.Forms.Button()
         Me.Namapemesan = New System.Windows.Forms.TextBox()
@@ -281,7 +280,6 @@ Partial Class Purchasing
         Me.GroupBox1.Controls.Add(Me.Save)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.tgl_kirim)
-        Me.GroupBox1.Controls.Add(Me.Delete)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Edit)
         Me.GroupBox1.Controls.Add(Me.Namapemesan)
@@ -439,15 +437,6 @@ Partial Class Purchasing
         Me.tgl_kirim.Size = New System.Drawing.Size(167, 20)
         Me.tgl_kirim.TabIndex = 27
         '
-        'Delete
-        '
-        Me.Delete.Location = New System.Drawing.Point(267, 378)
-        Me.Delete.Name = "Delete"
-        Me.Delete.Size = New System.Drawing.Size(75, 34)
-        Me.Delete.TabIndex = 48
-        Me.Delete.Text = "Delete"
-        Me.Delete.UseVisualStyleBackColor = True
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
@@ -570,7 +559,6 @@ Partial Class Purchasing
         'batchcmb
         '
         Me.batchcmb.FormattingEnabled = True
-        Me.batchcmb.Items.AddRange(New Object() {"Net d Days", "Net EOM", "In Advance"})
         Me.batchcmb.Location = New System.Drawing.Point(99, 33)
         Me.batchcmb.Name = "batchcmb"
         Me.batchcmb.Size = New System.Drawing.Size(121, 21)
@@ -579,7 +567,7 @@ Partial Class Purchasing
         'Nama
         '
         Me.Nama.FormattingEnabled = True
-        Me.Nama.Items.AddRange(New Object() {"Net d Days", "Net EOM", "In Advance"})
+        Me.Nama.Items.AddRange(New Object() {"Tepung Terigu", "Garam", "Minyak Goreng", "Telur"})
         Me.Nama.Location = New System.Drawing.Point(99, 65)
         Me.Nama.Name = "Nama"
         Me.Nama.Size = New System.Drawing.Size(121, 21)
@@ -645,7 +633,6 @@ Partial Class Purchasing
     Friend WithEvents jumlahorder As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents tgl_kirim As DateTimePicker
-    Friend WithEvents Delete As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents Edit As Button
     Friend WithEvents Namapemesan As TextBox
