@@ -172,6 +172,18 @@
       <DependentUpon>Report QC.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Report RM.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report RM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report RM1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report RM1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Warehouse FG.Designer.vb">
       <DependentUpon>Warehouse FG.vb</DependentUpon>
     </Compile>
@@ -222,6 +234,14 @@
     <EmbeddedResource Include="Report QC.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Report QC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report RM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report RM.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report RM1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report RM1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Warehouse FG.resx">
       <DependentUpon>Warehouse FG.vb</DependentUpon>
