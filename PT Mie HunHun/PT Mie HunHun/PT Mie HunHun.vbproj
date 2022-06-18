@@ -148,6 +148,12 @@
     <Compile Include="QC.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report FG.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report FG.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report Invoice.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -200,6 +206,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QC.resx">
       <DependentUpon>QC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report FG.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report FG.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report Invoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
