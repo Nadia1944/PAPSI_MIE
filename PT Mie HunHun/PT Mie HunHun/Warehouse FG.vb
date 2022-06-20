@@ -82,7 +82,6 @@
         Private Sub FG_Load(sender As Object, e As EventArgs) Handles MyBase.Load
             Call TampilkanData()
         Call invoice()
-        Call Nomorfakturotomatis()
         txtfgminus.Enabled = False
             txtjmlminus.Enabled = False
         End Sub

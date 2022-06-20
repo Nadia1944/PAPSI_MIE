@@ -79,6 +79,8 @@
         txtnoPO.Text = NoPO.Text
         Call kondisiawal()
         Call NomorPO()
+        Call PO()
+        Call struksupplier()
     End Sub
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         Call KosongkanForm()
@@ -186,5 +188,82 @@
         Catch ex As Exception
             MsgBox("Data RM Tidak Ditemukan")
         End Try
+    End Sub
+
+    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
+        If txtnoPO.Text = "" Or Supplier.Text = "" Or Namapemesan.Text = "" Or
+             batchcmb.Text = "" Or Nama.Text = "" Or jumlahorder.Text = "" Or satuanRM.Text = "" Or
+             hargaRM.Text = "" Or cmbTOP.Text = "" Then
+            MsgBox("Data Pembuatan Pesanan Belum Lengkap")
+            Exit Sub
+        Else
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Purchasing where NO_PO ='" & txtnoPO.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            DM.Read()
+            If Not DM.HasRows Then
+                Call koneksiDB()
+                Dim simpan As String
+                simpan = "insert into Purchasing values ('" & txtnoPO.Text & "', '" & tglPO.Value & "','" & Supplier.Text & "','" & Namapemesan.Text & "','" & batchcmb.Text & "',
+'" & Nama.Text & "','" & jumlahorder.Text & "','" & satuanRM.Text & "','" & hargaRM.Text & "','" & tgl_kirim.Text & "','" & cmbTOP.Text & "')"
+                CMD = New OleDb.OleDbCommand(simpan, Conn)
+                CMD.ExecuteNonQuery()
+                MsgBox("Pesanan RM Berhasil Ditambahkan")
+            Else
+                MsgBox("Pesanan Sudah Ada")
+            End If
+            Call KosongkanForm()
+            Call kondisiawal()
+            Call NomorPO()
+        End If
+    End Sub
+
+    Private Sub NoPO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles NoPO.SelectedIndexChanged
+        Try
+            Call koneksiDB()
+            CMD = New OleDb.OleDbCommand(" select * from Purchasing where No_Po ='" & NoPO.Text & "'", Conn)
+            DM = CMD.ExecuteReader
+            If DM.HasRows = True Then
+                DM.Read()
+                NoPO.Text = DM.Item("No_PO")
+                namapengirim.Text = DM.Item("Supplier")
+                totalbiaya.Text = DM.Item("Harga_RM")
+                tglkirim.Text = DM.Item("Tanggal_Kirim")
+            End If
+        Catch ex As Exception
+            MsgBox("Data Pesanan Tidak Ditemukan")
+        End Try
+    End Sub
+    Sub PO()
+        Call koneksiDB()
+        Try
+            CMD = New OleDb.OleDbCommand("select * from Purchasing", Conn)
+            DM = CMD.ExecuteReader
+            DM.Read()
+            NoPO.Items.Clear()
+            Do While DM.Read = True
+                NoPO.Items.Add(DM.Item("No_PO"))
+            Loop
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Sub struksupplier()
+        Call koneksiDB()
+        CMD = New OleDb.OleDbCommand("select * from Purchasing where No_PO in (select max(No_PO) from Purchasing)", Conn)
+        DM = CMD.ExecuteReader
+        DM.Read()
+        Dim urutankode As String
+        Dim hitung As Long
+        If Not DM.HasRows Then
+            urutankode = "SU" + Format(Now, "yyMMdd") + "001"
+        Else
+            hitung = Microsoft.VisualBasic.Right(DM.GetString(0), 9) + 1
+            urutankode = "SU" + Format(Now, "yyMMdd") + Microsoft.VisualBasic.Right("000" & hitung, 3)
+        End If
+        txtnoPO.Text = urutankode
+    End Sub
+    Private Sub btnsavedetailbayar_Click(sender As Object, e As EventArgs) Handles btnsavedetailbayar.Click
+
     End Sub
 End Class

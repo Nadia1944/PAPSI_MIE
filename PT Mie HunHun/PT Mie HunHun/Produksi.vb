@@ -132,10 +132,10 @@
             DM = CMD.ExecuteReader
             If DM.HasRows = True Then
                 DM.Read()
+                'FG.Text = DM.Item ("FG_Minus")
                 idmie.Text = DM.Item("ID_Mie")
                 jenismie.Text = DM.Item("Jenis")
                 'jumlah.Text = DM.Item("Jumlah")
-
                 idmie.Focus()
             End If
         Catch ex As Exception
@@ -194,6 +194,7 @@
                 DM.Read()
                 Cmbbatch.Text = DM.Item("Kode_Batch")
                 noinvoice.Text = DM.Item("Invoice")
+                FGD.Text = DM.Item("FG_Minus")
                 jadwal.Value = DM.Item("Jadwal_Produksi")
                 mieid.Text = DM.Item("ID_Mie")
                 jenis.Text = DM.Item("Jenis_Mie")
@@ -231,6 +232,9 @@
             DM = CMD.ExecuteReader
             If DM.HasRows = True Then
                 DM.Read()
+                'Invoice.Text = DM.Item("Invoice")
+                'idmie.Text = DM.Item("ID_Mie")
+                'jenismie.Text = DM.Item("Jenis")
                 FG.Text = DM.Item("FG_Minus")
                 jumlah.Text = DM.Item("Jumlah")
                 FG.Focus()

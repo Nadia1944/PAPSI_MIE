@@ -84,6 +84,8 @@ Partial Class Produksi
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.FGD = New System.Windows.Forms.TextBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -471,6 +473,8 @@ Partial Class Produksi
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.FGD)
+        Me.GroupBox5.Controls.Add(Me.Label23)
         Me.GroupBox5.Controls.Add(Me.noinvoice)
         Me.GroupBox5.Controls.Add(Me.Cmbbatch)
         Me.GroupBox5.Controls.Add(Me.Label12)
@@ -479,7 +483,7 @@ Partial Class Produksi
         Me.GroupBox5.Controls.Add(Me.Label14)
         Me.GroupBox5.Location = New System.Drawing.Point(29, 49)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(263, 98)
+        Me.GroupBox5.Size = New System.Drawing.Size(263, 139)
         Me.GroupBox5.TabIndex = 28
         Me.GroupBox5.TabStop = False
         Me.GroupBox5.Text = "Produksi"
@@ -510,7 +514,7 @@ Partial Class Produksi
         '
         'jadwal
         '
-        Me.jadwal.Location = New System.Drawing.Point(98, 73)
+        Me.jadwal.Location = New System.Drawing.Point(98, 99)
         Me.jadwal.Name = "jadwal"
         Me.jadwal.Size = New System.Drawing.Size(155, 20)
         Me.jadwal.TabIndex = 21
@@ -520,9 +524,9 @@ Partial Class Produksi
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(7, 76)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(84, 13)
+        Me.Label13.Size = New System.Drawing.Size(67, 13)
         Me.Label13.TabIndex = 20
-        Me.Label13.Text = "Jadwal Produksi"
+        Me.Label13.Text = "FG_Demand"
         '
         'Label14
         '
@@ -561,7 +565,7 @@ Partial Class Produksi
         '
         'buatpesanan
         '
-        Me.buatpesanan.Location = New System.Drawing.Point(202, 329)
+        Me.buatpesanan.Location = New System.Drawing.Point(202, 384)
         Me.buatpesanan.Name = "buatpesanan"
         Me.buatpesanan.Size = New System.Drawing.Size(90, 33)
         Me.buatpesanan.TabIndex = 23
@@ -580,7 +584,7 @@ Partial Class Produksi
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label16)
         Me.GroupBox3.Controls.Add(Me.Label17)
-        Me.GroupBox3.Location = New System.Drawing.Point(30, 152)
+        Me.GroupBox3.Location = New System.Drawing.Point(30, 206)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(262, 172)
         Me.GroupBox3.TabIndex = 16
@@ -678,6 +682,22 @@ Partial Class Produksi
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "DEPARTEMEN PRODUKSI"
         '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(7, 105)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(84, 13)
+        Me.Label23.TabIndex = 27
+        Me.Label23.Text = "Jadwal Produksi"
+        '
+        'FGD
+        '
+        Me.FGD.Location = New System.Drawing.Point(98, 73)
+        Me.FGD.Name = "FGD"
+        Me.FGD.Size = New System.Drawing.Size(155, 20)
+        Me.FGD.TabIndex = 28
+        '
         'Produksi
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -768,4 +788,6 @@ Partial Class Produksi
     Friend WithEvents FG As ComboBox
     Friend WithEvents Label22 As Label
     Friend WithEvents Invoice As ComboBox
+    Friend WithEvents FGD As TextBox
+    Friend WithEvents Label23 As Label
 End Class

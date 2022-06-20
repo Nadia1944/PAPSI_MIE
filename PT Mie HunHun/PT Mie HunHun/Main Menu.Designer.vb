@@ -34,6 +34,8 @@ Partial Class Main_Menu
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QCToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.labeluser = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,11 +106,32 @@ Partial Class Main_Menu
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("MV Boli", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(74, 121)
+        Me.Label1.Location = New System.Drawing.Point(79, 185)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(316, 49)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "PT Mie HunHun"
+        '
+        'labeluser
+        '
+        Me.labeluser.AutoSize = True
+        Me.labeluser.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.labeluser.Location = New System.Drawing.Point(214, 128)
+        Me.labeluser.Name = "labeluser"
+        Me.labeluser.Size = New System.Drawing.Size(57, 25)
+        Me.labeluser.TabIndex = 3
+        Me.labeluser.Text = "User"
+        Me.labeluser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(151, 81)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(179, 25)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "Selamat Datang"
         '
         'Main_Menu
         '
@@ -117,6 +140,8 @@ Partial Class Main_Menu
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(471, 290)
+        Me.Controls.Add(Me.labeluser)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -140,4 +165,6 @@ Partial Class Main_Menu
     Friend WithEvents Label1 As Label
     Friend WithEvents DepartemenToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents labeluser As Label
+    Friend WithEvents Label2 As Label
 End Class

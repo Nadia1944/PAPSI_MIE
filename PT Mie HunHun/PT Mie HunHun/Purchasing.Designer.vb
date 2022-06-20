@@ -28,7 +28,6 @@ Partial Class Purchasing
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.tglterima = New System.Windows.Forms.DateTimePicker()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.NoPO = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.tglkirim = New System.Windows.Forms.TextBox()
@@ -50,6 +49,9 @@ Partial Class Purchasing
         Me.dgvPO = New System.Windows.Forms.DataGridView()
         Me.Save = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Nama = New System.Windows.Forms.ComboBox()
+        Me.batchcmb = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.satuanRM = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.hargaRM = New System.Windows.Forms.TextBox()
@@ -60,7 +62,6 @@ Partial Class Purchasing
         Me.tgl_kirim = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Edit = New System.Windows.Forms.Button()
-        Me.Namapemesan = New System.Windows.Forms.TextBox()
         Me.Supplier = New System.Windows.Forms.TextBox()
         Me.tglPO = New System.Windows.Forms.DateTimePicker()
         Me.txtnoPO = New System.Windows.Forms.TextBox()
@@ -71,9 +72,8 @@ Partial Class Purchasing
         Me.cmbTOP = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.batchcmb = New System.Windows.Forms.ComboBox()
-        Me.Nama = New System.Windows.Forms.ComboBox()
+        Me.Namapemesan = New System.Windows.Forms.ComboBox()
+        Me.NoPO = New System.Windows.Forms.ComboBox()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,9 +115,9 @@ Partial Class Purchasing
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.NoPO)
         Me.GroupBox4.Controls.Add(Me.tglterima)
         Me.GroupBox4.Controls.Add(Me.Button2)
-        Me.GroupBox4.Controls.Add(Me.NoPO)
         Me.GroupBox4.Controls.Add(Me.Label19)
         Me.GroupBox4.Controls.Add(Me.Label18)
         Me.GroupBox4.Controls.Add(Me.tglkirim)
@@ -150,15 +150,8 @@ Partial Class Purchasing
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 34)
         Me.Button2.TabIndex = 67
-        Me.Button2.Text = "CETAK"
+        Me.Button2.Text = "CETAK INVOICE"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'NoPO
-        '
-        Me.NoPO.Location = New System.Drawing.Point(131, 16)
-        Me.NoPO.Name = "NoPO"
-        Me.NoPO.Size = New System.Drawing.Size(151, 20)
-        Me.NoPO.TabIndex = 65
         '
         'Label19
         '
@@ -272,6 +265,7 @@ Partial Class Purchasing
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Namapemesan)
         Me.GroupBox1.Controls.Add(Me.Cancel)
         Me.GroupBox1.Controls.Add(Me.btnexit)
         Me.GroupBox1.Controls.Add(Me.CetakPO)
@@ -282,7 +276,6 @@ Partial Class Purchasing
         Me.GroupBox1.Controls.Add(Me.tgl_kirim)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Edit)
-        Me.GroupBox1.Controls.Add(Me.Namapemesan)
         Me.GroupBox1.Controls.Add(Me.Supplier)
         Me.GroupBox1.Controls.Add(Me.tglPO)
         Me.GroupBox1.Controls.Add(Me.txtnoPO)
@@ -373,6 +366,32 @@ Partial Class Purchasing
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Detail Bahan Baku"
         '
+        'Nama
+        '
+        Me.Nama.FormattingEnabled = True
+        Me.Nama.Items.AddRange(New Object() {"Tepung Terigu", "Garam", "Minyak Goreng", "Telur"})
+        Me.Nama.Location = New System.Drawing.Point(99, 65)
+        Me.Nama.Name = "Nama"
+        Me.Nama.Size = New System.Drawing.Size(121, 21)
+        Me.Nama.TabIndex = 58
+        '
+        'batchcmb
+        '
+        Me.batchcmb.FormattingEnabled = True
+        Me.batchcmb.Location = New System.Drawing.Point(99, 33)
+        Me.batchcmb.Name = "batchcmb"
+        Me.batchcmb.Size = New System.Drawing.Size(121, 21)
+        Me.batchcmb.TabIndex = 57
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(7, 36)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 13)
+        Me.Label4.TabIndex = 36
+        Me.Label4.Text = "Kode Batch"
+        '
         'satuanRM
         '
         Me.satuanRM.Location = New System.Drawing.Point(99, 127)
@@ -454,13 +473,6 @@ Partial Class Purchasing
         Me.Edit.TabIndex = 47
         Me.Edit.Text = "Edit"
         Me.Edit.UseVisualStyleBackColor = True
-        '
-        'Namapemesan
-        '
-        Me.Namapemesan.Location = New System.Drawing.Point(104, 91)
-        Me.Namapemesan.Name = "Namapemesan"
-        Me.Namapemesan.Size = New System.Drawing.Size(159, 20)
-        Me.Namapemesan.TabIndex = 22
         '
         'Supplier
         '
@@ -547,31 +559,22 @@ Partial Class Purchasing
         Me.TabControl1.Size = New System.Drawing.Size(682, 496)
         Me.TabControl1.TabIndex = 61
         '
-        'Label4
+        'Namapemesan
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(7, 36)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 13)
-        Me.Label4.TabIndex = 36
-        Me.Label4.Text = "Kode Batch"
+        Me.Namapemesan.FormattingEnabled = True
+        Me.Namapemesan.Items.AddRange(New Object() {"Mr. Vendy", "Mr. Fauzi", "Mr. Devan"})
+        Me.Namapemesan.Location = New System.Drawing.Point(104, 91)
+        Me.Namapemesan.Name = "Namapemesan"
+        Me.Namapemesan.Size = New System.Drawing.Size(159, 21)
+        Me.Namapemesan.TabIndex = 57
         '
-        'batchcmb
+        'NoPO
         '
-        Me.batchcmb.FormattingEnabled = True
-        Me.batchcmb.Location = New System.Drawing.Point(99, 33)
-        Me.batchcmb.Name = "batchcmb"
-        Me.batchcmb.Size = New System.Drawing.Size(121, 21)
-        Me.batchcmb.TabIndex = 57
-        '
-        'Nama
-        '
-        Me.Nama.FormattingEnabled = True
-        Me.Nama.Items.AddRange(New Object() {"Tepung Terigu", "Garam", "Minyak Goreng", "Telur"})
-        Me.Nama.Location = New System.Drawing.Point(99, 65)
-        Me.Nama.Name = "Nama"
-        Me.Nama.Size = New System.Drawing.Size(121, 21)
-        Me.Nama.TabIndex = 58
+        Me.NoPO.FormattingEnabled = True
+        Me.NoPO.Location = New System.Drawing.Point(131, 20)
+        Me.NoPO.Name = "NoPO"
+        Me.NoPO.Size = New System.Drawing.Size(151, 21)
+        Me.NoPO.TabIndex = 70
         '
         'Purchasing
         '
@@ -603,7 +606,6 @@ Partial Class Purchasing
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents tglterima As DateTimePicker
     Friend WithEvents Button2 As Button
-    Friend WithEvents NoPO As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents tglkirim As TextBox
@@ -635,7 +637,6 @@ Partial Class Purchasing
     Friend WithEvents tgl_kirim As DateTimePicker
     Friend WithEvents Label9 As Label
     Friend WithEvents Edit As Button
-    Friend WithEvents Namapemesan As TextBox
     Friend WithEvents Supplier As TextBox
     Friend WithEvents tglPO As DateTimePicker
     Friend WithEvents txtnoPO As TextBox
@@ -649,4 +650,6 @@ Partial Class Purchasing
     Friend WithEvents Nama As ComboBox
     Friend WithEvents batchcmb As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Namapemesan As ComboBox
+    Friend WithEvents NoPO As ComboBox
 End Class
