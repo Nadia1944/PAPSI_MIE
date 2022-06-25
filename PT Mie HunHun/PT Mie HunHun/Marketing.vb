@@ -1,4 +1,6 @@
 ﻿Public Class Marketing
+    Dim OpenFileDialog1 As New OpenFileDialog
+    Dim BR_Generator As New MessagingToolkit.Barcode.BarcodeEncoder
     Sub Nomorfakturotomatis()
         Call koneksiDB()
         CMD = New OleDb.OleDbCommand("Select * from Marketing where Invoice in (select max(Invoice) from Marketing)", Conn)
@@ -14,6 +16,14 @@
             Microsoft.VisualBasic.Right("000" & hitung, 3)
         End If
         txtinvoice.Text = urutankode
+    End Sub
+    Private Sub PrintBarcode()
+        BR_Generator.IncludeLabel = True
+        BR_Generator.CustomLabel = txtinvoice.Text
+        Try
+            PictureBox1.Image = BR_Generator.Encode(MessagingToolkit.Barcode.BarcodeFormat.Code128, txtinvoice.Text)
+        Catch ex As Exception
+        End Try
     End Sub
     Sub TampilkanData()
         Call koneksiDB()
@@ -69,8 +79,10 @@
                 MsgBox("Maaf Uang Pembayaran Kurang")
             ElseIf Val(txtbayar.Text) = Val(txtgrand.Text) Then
                 txtkembalian.Text = 0
+                Call PrintBarcode()
             ElseIf Val(txtbayar.Text) > Val(txtgrand.Text) Then
                 txtkembalian.Text = Val(txtbayar.Text) - Val(txtgrand.Text)
+                Call PrintBarcode()
                 btn_simpan.Focus()
             End If
         End If
@@ -79,11 +91,15 @@
         If txtinvoice.Text = "" Or txtnama.Text = "" Or txtalamat.Text = "" Or txtidmie.Text = "" Or cmb_jenis.Text = "" Or txtjumlah.Text = "" Then
             MsgBox("Data Transaksi Belum Lengkap")
         Else
+            Dim azzura As String
+            azzura = "C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\Barcode Marketing\BR_"
+            azzura = azzura + txtinvoice.Text + ".jpg"
+            PictureBox1.Image.Save(azzura)
             Dim subtotal As String
             subtotal = Val(txtharga.Text) * Val(txtjumlah.Text) * 24
             Dim statusorder As String
             statusorder = "Belum Dikirim"
-            Dim simpanmarketing As String = $"Insert into Marketing values('{txtinvoice.Text}','{tglorder.Value.ToString()}','{txtnama.Text}','{txtalamat.Text}','{txtongkir.Text}','{txtidmie.Text}','{cmb_jenis.Text}','{txtharga.Text}','{txtjumlah.Text}','{subtotal}','{txtgrand.Text}','{txtbayar.Text}','{txtkembalian.Text}','{statusorder}')"
+            Dim simpanmarketing As String = $"Insert into Marketing values('{txtinvoice.Text}','{tglorder.Value.ToString()}','{txtnama.Text}','{txtalamat.Text}','{txtongkir.Text}','{txtidmie.Text}','{cmb_jenis.Text}','{txtharga.Text}','{txtjumlah.Text}','{subtotal}','{txtgrand.Text}','{txtbayar.Text}','{txtkembalian.Text}','{statusorder}','{azzura}')"
             '$"insert into Ticket values ('{nama textbox-nya}', '{nama textbox-nya}')"
             CMD = New OleDb.OleDbCommand(simpanmarketing, Conn)
             CMD.ExecuteNonQuery()
@@ -98,5 +114,9 @@
     Private Sub Marketing_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Nomorfakturotomatis()
         Call TampilkanData()
+    End Sub
+
+    Private Sub txtinvoice_TextChanged(sender As Object, e As EventArgs) Handles txtinvoice.TextChanged
+
     End Sub
 End Class

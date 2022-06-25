@@ -1,4 +1,5 @@
 ﻿Public Class Login
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Call koneksiDB()
         Dim cek As String
@@ -40,28 +41,8 @@
         End
     End Sub
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        TextBox2.PasswordChar = "*"
         TextBox1.Focus()
+        TextBox2.PasswordChar = "*"
     End Sub
 
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
-
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
 End Class

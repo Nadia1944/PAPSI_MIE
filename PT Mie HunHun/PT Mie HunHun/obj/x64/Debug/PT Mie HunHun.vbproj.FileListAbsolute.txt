@@ -108,3 +108,28 @@ C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie H
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Login.resources
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Form_Report_Produksi.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\PT Mie HunHun.exe.config
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\PT Mie HunHun.exe
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\PT Mie HunHun.pdb
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\PT Mie HunHun.xml
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\MessagingToolkit.Barcode.dll
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\MessagingToolkit.QRCode.dll
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\WebCam_Capture.dll
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\bin\x64\Debug\stdole.dll
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.vbproj.AssemblyReference.cache
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Form_Report_Produksi.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Login.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Main_Menu.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Marketing.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Resources.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Produksi.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Purchasing.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.QC.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Warehouse_FG.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Warehouse_RM.resources
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.vbproj.GenerateResource.cache
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.vbproj.CoreCompileInputs.cache
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.vbproj.CopyComplete
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.exe
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.xml
+C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
