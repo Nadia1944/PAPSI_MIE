@@ -107,3 +107,4 @@ C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie H
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.xml
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
 C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Login.resources
+C:\Users\ASUS\Music\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Form_Report_Produksi.resources

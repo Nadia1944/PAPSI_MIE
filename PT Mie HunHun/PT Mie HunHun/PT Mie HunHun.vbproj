@@ -101,6 +101,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form Report Produksi.Designer.vb">
+      <DependentUpon>Form Report Produksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form Report Produksi.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form Report Produksi.resx">
+      <DependentUpon>Form Report Produksi.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>

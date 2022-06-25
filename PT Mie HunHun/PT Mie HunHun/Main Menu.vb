@@ -34,4 +34,13 @@
     Private Sub WarehouseRMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WarehouseRMToolStripMenuItem.Click
         Warehouse_RM.Show()
     End Sub
+
+    Friend Class Report_Produksi
+        Public Sub New()
+        End Sub
+    End Class
+
+    Private Sub ReportToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ReportToolStripMenuItem1.Click
+        Form_Report_Produksi.Show()
+    End Sub
 End Class

@@ -36,6 +36,7 @@ Partial Class Main_Menu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.labeluser = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -75,6 +76,7 @@ Partial Class Main_Menu
         '
         'ProduksiToolStripMenuItem
         '
+        Me.ProduksiToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripMenuItem1})
         Me.ProduksiToolStripMenuItem.Name = "ProduksiToolStripMenuItem"
         Me.ProduksiToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ProduksiToolStripMenuItem.Text = "Produksi"
@@ -133,6 +135,12 @@ Partial Class Main_Menu
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Selamat Datang"
         '
+        'ReportToolStripMenuItem1
+        '
+        Me.ReportToolStripMenuItem1.Name = "ReportToolStripMenuItem1"
+        Me.ReportToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
+        Me.ReportToolStripMenuItem1.Text = "Report"
+        '
         'Main_Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -167,4 +175,5 @@ Partial Class Main_Menu
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents labeluser As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents ReportToolStripMenuItem1 As ToolStripMenuItem
 End Class
