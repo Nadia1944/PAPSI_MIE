@@ -133,3 +133,5 @@ C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\De
 C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.exe
 C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.xml
 C:\Users\NITRO\Documents\GitHub\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\PT Mie HunHun.pdb
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Form_Report_Produksi.resources
+C:\Users\Anggis\Documents\S M T R  6 ! !\Prak APSI\SI UAS\PAPSI_MIE\PT Mie HunHun\PT Mie HunHun\obj\x64\Debug\Main_Menu.Login.resources

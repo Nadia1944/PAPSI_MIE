@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Warehouse_RM
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Warehouse_RM
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -46,8 +46,6 @@ Partial Class Warehouse_RM
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btn_exit = New System.Windows.Forms.Button()
-        Me.Cekstatus = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -268,30 +266,12 @@ Partial Class Warehouse_RM
         '
         'btn_exit
         '
-        Me.btn_exit.Location = New System.Drawing.Point(948, 397)
+        Me.btn_exit.Location = New System.Drawing.Point(638, 233)
         Me.btn_exit.Name = "btn_exit"
         Me.btn_exit.Size = New System.Drawing.Size(75, 30)
         Me.btn_exit.TabIndex = 51
         Me.btn_exit.Text = "EXIT"
         Me.btn_exit.UseVisualStyleBackColor = True
-        '
-        'Cekstatus
-        '
-        Me.Cekstatus.Location = New System.Drawing.Point(933, 338)
-        Me.Cekstatus.Name = "Cekstatus"
-        Me.Cekstatus.Size = New System.Drawing.Size(77, 32)
-        Me.Cekstatus.TabIndex = 53
-        Me.Cekstatus.Text = "Cek Status "
-        Me.Cekstatus.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(958, 305)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 32)
-        Me.Button1.TabIndex = 54
-        Me.Button1.Text = "SAVE"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Warehouse_RM
         '
@@ -300,8 +280,6 @@ Partial Class Warehouse_RM
         Me.ClientSize = New System.Drawing.Size(1035, 485)
         Me.Controls.Add(Me.btnsave)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Cekstatus)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btn_exit)
         Me.Controls.Add(Me.GroupBox1)
@@ -340,6 +318,4 @@ Partial Class Warehouse_RM
     Friend WithEvents Label10 As Label
     Friend WithEvents btnsave As Button
     Friend WithEvents btn_exit As Button
-    Friend WithEvents Cekstatus As Button
-    Friend WithEvents Button1 As Button
 End Class
